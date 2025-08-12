@@ -4,12 +4,12 @@ export default function HeroSection() {
         {/* Text Content */}
         <div className="lg:w-1/2 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                <span className="block">Sun-Ripened</span>
-                <span className="block text-berry-red">Strawberries</span>
+                <span className="block">Ventas</span>
+                <span className="block text-purple-500">Caro</span>
             </h1>
             
             <div className="h-12 overflow-hidden mb-6">
-                <h2 className="text-xl md:text-2xl font-semibold whitespace-nowrap border-r-4 border-r-berry-red pr-2 animate-typewriter animate-blink">
+                <h2 className="text-xl md:text-2xl font-semibold whitespace-nowrap border-r-4 border-r-purple-500 pr-2 animate-typewriter animate-blink">
                     Fresh from our fields
                 </h2>
             </div>
@@ -19,10 +19,10 @@ export default function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-3 bg-berry-red text-white rounded-lg hover:bg-berry-red/90 transition-all transform hover:-translate-y-1 shadow-lg">
+                <button className="px-8 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all transform hover:-translate-y-1 shadow-lg">
                     Shop Now
                 </button>
-                <button className="px-8 py-3 border border-berry-red text-berry-red rounded-lg hover:bg-berry-red/10 transition-all">
+                <button className="px-8 py-3 border border-purple-500 text-purple-500 rounded-lg hover:bg-purple-500/10 transition-all">
                     Visit Our Farm
                 </button>
             </div>

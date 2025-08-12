@@ -22,8 +22,8 @@ function NavHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
-      <Navbar className="backdrop-blur-md">
+    <div className="w-full sticky top-0 z-50">
+      <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
@@ -43,7 +43,7 @@ function NavHeader() {
 
         {/* Mobile Navigation */}
         <MobileNav>
-          <MobileNavHeader>
+          <MobileNavHeader className="">
             <NavbarLogo />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
@@ -54,7 +54,7 @@ function NavHeader() {
           <MobileNavMenu
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
-            className="backdrop-blur-md p-6 shadow-lg"
+            className="p-6 shadow-lg"
           >
             {navItems.map((item, idx) => (
               <a
