@@ -17,7 +17,6 @@ function NavHeader() {
     { name: "Productos", link: "#products" },
     { name: "Servicios", link: "#services" },
     { name: "Preguntas", link: "#questions" },
-    { name: "Contacto", link: "#contact" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
