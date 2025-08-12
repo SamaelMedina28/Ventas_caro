@@ -29,7 +29,7 @@ function NavHeader() {
           <NavbarLogo />
           <NavItems
             items={navItems}
-            className="gap-6 text-pink-600 hover:text-pink-800 transition-colors duration-300"
+            className="gap-6"
           />
           <div className="flex items-center gap-4">
             <NavbarButton

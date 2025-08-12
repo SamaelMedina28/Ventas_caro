@@ -20,10 +20,10 @@ export default function HeroSection() {
             
             <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all transform hover:-translate-y-1 shadow-lg">
-                    Shop Now
+                    Contactame
                 </button>
                 <button className="px-8 py-3 border border-purple-500 text-purple-500 rounded-lg hover:bg-purple-500/10 transition-all">
-                    Visit Our Farm
+                    Productos
                 </button>
             </div>
             
