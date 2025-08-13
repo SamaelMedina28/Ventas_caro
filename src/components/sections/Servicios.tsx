@@ -1,84 +1,113 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Servicios() {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="services">
+    <div className="px-5 py-16 mx-auto sm:px-8 md:px-12 lg:px-8 lg:py-20 max-w-7xl" id="services">
+      {/* Header Section */}
+      <div className="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="inline-block px-4 py-2 mb-6 text-sm font-semibold tracking-wider uppercase rounded-full bg-purple-100 text-purple-800"
+        >
+          Nuestros servicios
+        </motion.div>
 
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <div>
-          <p
-            className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-blue-200 text-blue-800">
-            Nuestros servicios
-          </p>
-        </div>
-        <h2
-          className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mb-6 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl"
+        >
           <span className="relative inline-block">
-
-            <svg viewBox="0 0 52 24" fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-slate-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+            <span className="relative">Descubre las formas en que podemos ayudarte</span>
+            <svg
+              viewBox="0 0 52 24"
+              fill="currentColor"
+              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-purple-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+            >
               <defs>
-                <pattern id="fdca20a0-aeb4-4caf-ba1b-4351eee42363" x="0" y="0" width=".135"
-                  height=".30">
+                <pattern id="pattern" x="0" y="0" width=".135" height=".30">
                   <circle cx="1" cy="1" r=".7"></circle>
                 </pattern>
               </defs>
-              <rect fill="url(#fdca20a0-aeb4-4caf-ba1b-4351eee42363)" width="52" height="24"></rect>
+              <rect fill="url(#pattern)" width="52" height="24"></rect>
             </svg>
-
-            <span className="relative">Descubre las formas en que podemos ayudarte</span>
           </span>
-        </h2>
-        <p className="text-base text-gray-700 md:text-lg">En Caro, nos enfocamos en brindarte la mejor experiencia de compra. Ofrecemos una amplia gama de productos de calidad, desde ropa hasta accesorios, todo diseñado para satisfacer tus necesidades y gustos.</p>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-lg text-gray-600 md:text-xl"
+        >
+          En Caro, nos enfocamos en brindarte la mejor experiencia de compra. Ofrecemos una amplia gama de productos de calidad, desde ropa hasta accesorios, todo diseñado para satisfacer tus necesidades y gustos.
+        </motion.p>
       </div>
 
-
-      <div className="grid max-w-md gap-8 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-3">
-        <Servicio nombre="Servicio 1" descripcion="Descripción del servicio 1" beneficios={["Beneficio 1", "Beneficio 2", "Beneficio 3"]} />
-        <Servicio nombre="Servicio 2" descripcion="Descripción del servicio 2" beneficios={["Beneficio 1", "Beneficio 2", "Beneficio 3"]} />
-        <Servicio nombre="Servicio 3" descripcion="Descripción del servicio 3" beneficios={["Beneficio 1", "Beneficio 2", "Beneficio 3"]} />
+      {/* Services Grid */}
+      <div className="grid gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-none">
+        <Servicio
+          nombre="Servicio 1"
+          descripcion="Descripción del servicio 1 que se adapta perfectamente a tus necesidades específicas."
+          beneficios={["Beneficio exclusivo", "Resultados garantizados", "Soporte 24/7"]}
+        />
+        <Servicio
+          nombre="Servicio 2"
+          descripcion="Descripción del servicio 2 con características innovadoras y solución personalizada."
+          beneficios={["Ahorro de tiempo", "Proceso simplificado", "Expertos certificados"]}
+        />
+        <Servicio
+          nombre="Servicio 3"
+          descripcion="Descripción del servicio 3 con enfoque premium y atención al detalle."
+          beneficios={["Calidad premium", "Entrega express", "Satisfacción garantizada"]}
+        />
       </div>
     </div>
-  )
+  );
 }
-
 
 type Props = {
   nombre: string;
   descripcion: string;
   beneficios: string[];
-}
+};
 
 function Servicio({ nombre, descripcion, beneficios }: Props) {
   return (
-    <motion.div className="flex flex-col sm:flex-row" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true, amount: 0.2 }}>
-      <div className="sm:mr-4">
-        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50">
-          <svg className="w-12 h-12 text-blue-400" stroke="currentColor" viewBox="0 0 52 52">
-            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-              points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+    <motion.div
+      className="flex flex-col p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <div className="flex items-start mb-4 space-x-4">
+        <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-purple-100 rounded-lg w-14 h-14">
+          <svg className="w-8 h-8 text-purple-600" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900">{nombre}</h3>
+          <p className="mt-1 text-gray-600">{descripcion}</p>
+        </div>
       </div>
-      <div>
-        <h6 className="mb-2 font-semibold leading-5">{nombre}:</h6>
-        <p className="mb-3 text-sm text-gray-900">
-          {descripcion}
-        </p>
-        <ul className="mb-4 -ml-1 space-y-2">
-          {beneficios.map((beneficio, index) => (
-            <li key={index} className="flex items-start">
-              <span className="mr-1">
-                <svg className="w-5 h-5 mt-px text-blue-400" stroke="currentColor" viewBox="0 0 52 52">
-                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-              </svg>
-            </span>
-          {beneficio}
+      <ul className="mt-4 space-y-3">
+        {beneficios.map((beneficio, index) => (
+          <li key={index} className="flex items-start">
+            <svg className="flex-shrink-0 w-5 h-5 mt-0.5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="ml-2 text-gray-700">{beneficio}</span>
           </li>
         ))}
-        </ul>
-      </div>
+      </ul>
     </motion.div>
-  )
+  );
 }

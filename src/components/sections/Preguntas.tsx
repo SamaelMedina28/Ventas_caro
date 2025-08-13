@@ -9,7 +9,7 @@ export default function Preguntas() {
           <p className="mt-4 text-sm leading-7 text-gray-500 font-regular">
             F.A.Q
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-700">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-700 font-serif">
             Preguntas <span className="text-sky-500/60">Frecuentes</span>
           </h2>
 
