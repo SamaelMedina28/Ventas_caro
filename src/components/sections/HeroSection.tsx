@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto gap-12">
+    <section className="min-h-screen pb-12 px-6 md:px-12 flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto gap-12">
         {/* Text Content */}
         <div className="lg:w-1/2 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
