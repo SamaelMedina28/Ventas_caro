@@ -122,19 +122,19 @@ function ProductItem({
 export default function Productos() {
   const [tipo, setTipo] = useState<string>("all");
   return (
-    <section>
+    <section className="max-w-7xl mx-auto" id="products">
       <div className="flex flex-col items-center justify-center gap-6 my-24">
         <BoxReveal boxColor="rgb(139, 92, 246, 0.8)" duration={0.5}>
           <h2 className="text-4xl font-bold text-purple-500">Productos</h2>
         </BoxReveal>
         <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">
           <button type="button" className="text-purple-700 border border-purple-600 bg-white hover:bg-purple-200 hover:text-purple-600 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3" onClick={() => setTipo("all")}>Todos</button>
-          <button type="button" className={cn("text-gray-900 border border-white hover:bg-blue-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Ropa" ? "bg-blue-400 text-white hover:bg-blue-500" : "")} onClick={() => setTipo("Ropa")}>Ropa</button>
-          <button type="button" className={cn("text-gray-900 border border-white hover:bg-blue-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Calzado" ? "bg-blue-400 text-white hover:bg-blue-500" : "")} onClick={() => setTipo("Calzado")}>Calzado</button>
-          <button type="button" className={cn("text-gray-900 border border-white hover:bg-blue-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Joyeria" ? "bg-blue-400 text-white hover:bg-blue-500" : "")} onClick={() => setTipo("Joyeria")}>Joyeria</button>
-          <button type="button" className={cn("text-gray-900 border border-white hover:bg-blue-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Otros" ? "bg-blue-400 text-white hover:bg-blue-500" : "")} onClick={() => setTipo("Otros")}>Otros</button>
+          <button type="button" className={cn("text-gray-900 border border-white hover:bg-purple-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Ropa" ? "bg-purple-400 text-white hover:bg-purple-400" : "")} onClick={() => setTipo("Ropa")}>Ropa</button>
+          <button type="button" className={cn("text-gray-900 border border-white hover:bg-purple-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Calzado" ? "bg-purple-400 text-white hover:bg-purple-400" : "")} onClick={() => setTipo("Calzado")}>Calzado</button>
+          <button type="button" className={cn("text-gray-900 border border-white hover:bg-purple-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Joyeria" ? "bg-purple-400 text-white hover:bg-purple-400" : "")} onClick={() => setTipo("Joyeria")}>Joyeria</button>
+          <button type="button" className={cn("text-gray-900 border border-white hover:bg-purple-50 bg-white focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3", tipo === "Otros" ? "bg-purple-400 text-white hover:bg-purple-400" : "")} onClick={() => setTipo("Otros")}>Otros</button>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {productos.filter((producto) => producto.categoria === tipo || tipo === "all").map((producto, index) => (
             <ProductItem key={index} src={producto.src} nombre={producto.nombre} descripcion={producto.descripcion} precio={producto.precio} />
           ))}
