@@ -5,6 +5,7 @@ import CallToAction from "./components/CallToAction";
 import Servicios from "./components/sections/Servicios";
 import Preguntas from "./components/sections/Preguntas";
 import Contacto from "./components/sections/Contacto";
+import Footer from "./components/sections/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <CallToAction/>
       <Preguntas/>
       <Contacto/>
+      <Footer/>
     </div>
   )
 }
