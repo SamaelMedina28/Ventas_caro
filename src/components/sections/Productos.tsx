@@ -125,7 +125,7 @@ export default function Productos() {
     <section className="max-w-7xl mx-auto" id="products">
       <div className="flex flex-col items-center justify-center gap-6 my-24">
         <BoxReveal boxColor="rgb(139, 92, 246, 0.8)" duration={0.5}>
-          <h2 className="text-4xl font-bold text-purple-500">Productos</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-purple-500">Productos</h2>
         </BoxReveal>
         <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">
           <button type="button" className="text-purple-700 border border-purple-600 bg-white hover:bg-purple-200 hover:text-purple-600 focus:outline-none rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3" onClick={() => setTipo("all")}>Todos</button>
